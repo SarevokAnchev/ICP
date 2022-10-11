@@ -11,6 +11,6 @@ add_library(${PROJECT_NAME} src/ICP.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 
-target_link_libraries(${PROJECT_NAME} Eigen3::Eigen kdtree)
+target_link_libraries(${PROJECT_NAME} PRIVATE Eigen3::Eigen PRIVATE kdtree)
 
 install(TARGETS ${PROJECT_NAME} LIBRARY DESTINATION lib)
